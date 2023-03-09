@@ -6,19 +6,60 @@
 
 .bg1 {
   background-color: #F8F7F3;
-  padding: 3%;
 }
 
 .bg2 {
   background-color: white;
+}
+
+.container {
   padding: 3%;
+}
+
+.sectionContent {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 99px;
+}
+.sectionContent .contentDescription .subtitle {
+  font-weight: 500;
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+.sectionContent .contentDescription h2 {
+  font-size: 40px;
+  font-weight: 600;
+}
+.sectionContent .contentDescription span {
+  font-weight: 400;
+  font-size: 30px;
+}
+.sectionContent .contentDescription .text {
+  margin-top: 30px;
+  margin-bottom: 60px;
+  font-weight: 400;
+  font-size: 16px;
+}
+.sectionContent .contentDescription ul {
+  margin-top: 20px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 30px;
+  margin-bottom: 60px;
+}
+.sectionContent .contentDescription ul li {
+  margin-left: 20px;
+}
+.sectionContent div img {
+  height: 650px;
 }
 
 nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0% 2%;
+  padding: 18px 120px;
 }
 nav ul {
   display: flex;
@@ -66,6 +107,8 @@ main .mainContent div p {
 }
 main .mainContent div .email {
   margin-bottom: 20px;
+  font-weight: 500;
+  font-size: 16px;
 }
 main .mainContent div div {
   display: flex;
@@ -73,6 +116,8 @@ main .mainContent div div {
   gap: 20px;
 }
 main .mainContent div div p {
+  font-size: 42px;
+  font-weight: 300;
   margin: 0%;
 }
 main .mainContent .mainImage {
@@ -87,12 +132,17 @@ main .mainContent .mainImage img {
 .PrimaryButton {
   background-color: #322728;
   color: white;
-  border: none;
+  border: none !important;
   border-radius: 30px;
   width: 160px;
   height: 51px;
   font-size: 16px;
   font-weight: 400;
+  transition: 0.3s;
+  cursor: pointer;
+}
+.PrimaryButton:hover {
+  background-color: #F57148;
 }
 
 .SecondButton {
@@ -104,6 +154,11 @@ main .mainContent .mainImage img {
   height: 51px;
   font-size: 16px;
   font-weight: 400;
+  transition: 0.3s;
+  cursor: pointer;
+}
+.SecondButton:hover {
+  background-color: #F57148;
 }
 
 .products {
@@ -136,11 +191,6 @@ main .mainContent .mainImage img {
   gap: 30px;
   margin-bottom: 107px;
 }
-.titleContent .subtitle1 {
-  font-size: 16px;
-  letter-spacing: 0.2em;
-  font-weight: 400;
-}
 .titleContent .title1 {
   margin: auto;
   width: 673px;
@@ -148,22 +198,125 @@ main .mainContent .mainImage img {
   font-weight: 500;
 }
 
-.contentDescription .subtitle {
-  font-weight: 500;
-  font-size: 20px;
-  margin-bottom: 10px;
-}
-.contentDescription h2 {
-  font-size: 40px;
-  font-weight: 600;
-}
-.contentDescription span {
+.subtitle1 {
+  font-size: 16px;
+  letter-spacing: 0.2em;
   font-weight: 400;
-  font-size: 30px;
+  text-align: center;
 }
-.contentDescription .text {
-  margin-top: 30px;
-  margin-bottom: 60px;
+
+.testimonials {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 199px;
+  margin-top: 98px;
+}
+.testimonials .testimonial,
+.testimonials .testimonial2 {
+  width: 451px;
+  height: 254px;
+  border-radius: 8px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.testimonials .testimonial .comment,
+.testimonials .testimonial2 .comment {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 24px;
+  margin: 50px 40px 90px;
+  text-align: center;
+}
+.testimonials .testimonial .avatar,
+.testimonials .testimonial2 .avatar {
+  position: absolute;
+  border-radius: 50%;
+  bottom: -65px;
+}
+.testimonials .testimonial .avatar p,
+.testimonials .testimonial2 .avatar p {
+  color: #2D2E2E;
+  font-weight: 600;
+  font-size: 16px;
+}
+.testimonials .testimonial {
+  background-color: #F7F7F7;
+  color: #2D2E2E;
+}
+.testimonials .testimonial2 {
+  position: relative;
+  bottom: 37px;
+  background-color: #322728;
+  color: white;
+}
+
+.happyHour {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.happyHour h2 {
+  width: 615px;
+  font-weight: 600;
+  font-size: 40px;
+  line-height: 48px;
+  text-align: center;
+  margin-bottom: 24px;
+}
+.happyHour p {
   font-weight: 400;
   font-size: 16px;
+  margin-bottom: 24px;
+}
+
+footer .footerContent {
+  display: flex;
+  align-items: top;
+  justify-content: space-between;
+}
+footer .footerContent h2 {
+  font-size: 16px;
+}
+footer .footerContent ul {
+  max-width: 356px;
+  margin-top: 26px;
+  list-style: none;
+}
+footer .footerContent ul li {
+  font-size: 16px;
+  line-height: 19px;
+  margin-bottom: 13px;
+}
+footer .footerContent form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 467px;
+  gap: 18px;
+  margin-top: 31px;
+}
+footer .footerContent form input, footer .footerContent form textarea {
+  width: 100%;
+  border: none;
+  padding-left: 16px;
+  height: 53px;
+}
+footer .footerContent form textarea {
+  width: 96%;
+  padding: 17px 16px;
+  height: 150px;
+}
+footer .footerContent form .btnSubmit {
+  width: 100%;
+  display: flex;
+  align-items: end;
+  justify-content: right;
 }/*# sourceMappingURL=style.css.map */
