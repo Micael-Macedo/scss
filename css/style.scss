@@ -1,0 +1,206 @@
+@import './colors.scss';
+
+* {
+    margin: 0%;
+    padding: 0%;
+    font-family: 'Inter', sans-serif;
+}
+
+.bg1 {
+    background-color: $BgColor1;
+    padding: 3%;
+}
+
+.bg2 {
+    background-color: $BgColor2;
+    padding: 3%;
+}
+
+@mixin inline($alignment) {
+    display: flex;
+    align-items: $alignment;
+}
+
+@mixin flexCenter($alignment) {
+    display: flex;
+    align-items: $alignment;
+    justify-content: center;
+}
+
+@mixin flexBetween($alignment) {
+    display: flex;
+    align-items: $alignment;
+    justify-content: space-between;
+}
+
+@mixin flexAround($alignment) {
+    display: flex;
+    align-items: $alignment;
+    justify-content: space-around;
+}
+
+@mixin flexEvenly($alignment) {
+    display: flex;
+    align-items: $alignment;
+    justify-content: space-evenly;
+}
+
+@mixin column {
+    flex-direction: column
+}
+
+nav {
+    @include flexBetween(center);
+    padding: 0% 2%;
+
+    ul {
+        @include flexBetween(center);
+        gap: 30px;
+        list-style: none;
+
+        li {
+            cursor: pointer;
+        }
+    }
+
+    div {
+        @include inline(center);
+        gap: 40px;
+    }
+}
+
+main {
+    padding: 5%;
+    @include flexCenter(center);
+
+    .mainContent {
+        @include flexCenter(center);
+
+        div {
+            width: 636px;
+
+            h1 {
+                width: 456px;
+                font-size: 80px;
+                color: $PrimaryColor;
+            }
+            span {
+                color: $PrimaryColor;
+                font-weight: 300;
+                font-size: 65px;
+            }
+            
+            p {
+                margin-top: 50px;
+                margin-bottom: 60px;
+            }
+
+            .email {
+                margin-bottom: 20px;
+            }
+
+            div {
+                @include inline(center);
+                gap: 20px;
+
+                p {
+                    margin: 0%;
+                }
+            }
+        }
+
+        .mainImage {
+            @include flexCenter(center);
+
+            img {
+                width: 657px;
+            }
+        }
+    }
+}
+
+.PrimaryButton {
+    background-color: $FourthColor;
+    color: white;
+    border: none;
+    border-radius: 30px;
+    width: 160px;
+    height: 51px;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.SecondButton {
+    background-color: $FourthColor;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    width: 160px;
+    height: 51px;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.products {
+    @include flexCenter(center);
+    gap: 60px;
+
+    div {
+        width: 250px;
+        @include flexCenter(center);
+        @include column();
+
+        img {
+            border-radius: 50%;
+            height: 259px;
+        }
+
+        h3 {
+            text-align: center;
+        }
+    }
+}
+
+.titleContent {
+    text-align: center;
+    @include flexCenter(center);
+    @include column();
+    gap: 30px;
+    margin-bottom: 107px;
+
+    .subtitle1 {
+        font-size: 16px;
+        letter-spacing: 0.2em;
+        font-weight: 400;
+    }
+
+    .title1 {
+        margin: auto;
+        width: 673px;
+        font-size: 40px;
+        font-weight: 500;
+    }
+}
+
+.contentDescription {
+    .subtitle {
+        font-weight: 500;
+        font-size: 20px;
+        margin-bottom: 10px;
+    }
+
+    h2 {
+        font-size: 40px;
+        font-weight: 600;
+    }
+    span {
+        font-weight: 400;
+        font-size: 30px;
+    }
+    .text{
+        margin-top: 30px;
+        margin-bottom: 60px;
+        font-weight: 400;
+        font-size: 16px;
+    }
+}

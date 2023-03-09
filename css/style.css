@@ -1,0 +1,169 @@
+* {
+  margin: 0%;
+  padding: 0%;
+  font-family: "Inter", sans-serif;
+}
+
+.bg1 {
+  background-color: #F8F7F3;
+  padding: 3%;
+}
+
+.bg2 {
+  background-color: white;
+  padding: 3%;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0% 2%;
+}
+nav ul {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+  list-style: none;
+}
+nav ul li {
+  cursor: pointer;
+}
+nav div {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+main {
+  padding: 5%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+main .mainContent {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+main .mainContent div {
+  width: 636px;
+}
+main .mainContent div h1 {
+  width: 456px;
+  font-size: 80px;
+  color: #F57148;
+}
+main .mainContent div span {
+  color: #F57148;
+  font-weight: 300;
+  font-size: 65px;
+}
+main .mainContent div p {
+  margin-top: 50px;
+  margin-bottom: 60px;
+}
+main .mainContent div .email {
+  margin-bottom: 20px;
+}
+main .mainContent div div {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+main .mainContent div div p {
+  margin: 0%;
+}
+main .mainContent .mainImage {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+main .mainContent .mainImage img {
+  width: 657px;
+}
+
+.PrimaryButton {
+  background-color: #322728;
+  color: white;
+  border: none;
+  border-radius: 30px;
+  width: 160px;
+  height: 51px;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.SecondButton {
+  background-color: #322728;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  width: 160px;
+  height: 51px;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.products {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 60px;
+}
+.products div {
+  width: 250px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.products div img {
+  border-radius: 50%;
+  height: 259px;
+}
+.products div h3 {
+  text-align: center;
+}
+
+.titleContent {
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 30px;
+  margin-bottom: 107px;
+}
+.titleContent .subtitle1 {
+  font-size: 16px;
+  letter-spacing: 0.2em;
+  font-weight: 400;
+}
+.titleContent .title1 {
+  margin: auto;
+  width: 673px;
+  font-size: 40px;
+  font-weight: 500;
+}
+
+.contentDescription .subtitle {
+  font-weight: 500;
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+.contentDescription h2 {
+  font-size: 40px;
+  font-weight: 600;
+}
+.contentDescription span {
+  font-weight: 400;
+  font-size: 30px;
+}
+.contentDescription .text {
+  margin-top: 30px;
+  margin-bottom: 60px;
+  font-weight: 400;
+  font-size: 16px;
+}/*# sourceMappingURL=style.css.map */
