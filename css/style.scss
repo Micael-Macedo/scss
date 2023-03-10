@@ -112,8 +112,11 @@ header {
     width: 100%;
 
     nav {
-        @include flexBetween(center);
         padding: 18px 120px;
+
+        @media screen and (max-width: 1024px) {
+            padding: 18px 60px;
+        }
 
         ul {
             @include flexBetween(center);
@@ -122,21 +125,30 @@ header {
 
             li {
                 cursor: pointer;
+                transition: 0.5s;
+                &:hover{
+                    color: $PrimaryColor;
+                }
             }
         }
 
-        div {
-            @include inline(center);
-            gap: 40px;
-        }
+        .desktop {
+            @include flexBetween(center);
 
-        @media screen and (max-width: 1024px) {
-            padding: 18px 60px;
-        }
+            div {
+                @include inline(center);
+                gap: 40px;
+            }
 
+        }
+        .mobile {
+            display: none;
+            .mobileMenu {
+                display: none;
+            }
+        }
     }
 }
-
 
 main {
     padding: 5%;
@@ -178,6 +190,7 @@ main {
                 @include inline(center);
                 gap: 20px;
                 width: 100%;
+
                 .PrimaryButton {
                     min-width: 160px;
                 }
@@ -402,20 +415,49 @@ footer {
 
     }
 }
-
 @media screen and (max-width: 768px) {
-    .sectionContent{
-        .contentDescription{
+    header {
+        nav {
+            padding: 18px 20px;
+            .desktop {
+                display: none;
+            }
+
+            .mobile {
+                display: flex;
+                @include inline(unset);
+                @include column();
+
+                .mobileOptions {
+                    @include flexBetween(center);
+
+                    .hamburguer {
+                        width: 50px;
+
+                        img {
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .sectionContent {
+        .contentDescription {
             width: 60%;
         }
+
         gap: 20px;
     }
-    footer{
-        .footerContent{
+
+    footer {
+        .footerContent {
             @include flexCenter(center);
             gap: 10px;
             flex-wrap: wrap;
-            form{
+
+            form {
                 width: 100%;
             }
         }
@@ -430,7 +472,7 @@ footer {
         div.mainText {
             width: 100%;
 
-            h1{
+            h1 {
                 width: 100%;
                 font-size: 70px;
             }
@@ -449,7 +491,6 @@ footer {
 
         div.mainImage {
             display: none;
-            visibility: hidden;
         }
     }
 
@@ -516,9 +557,10 @@ footer {
             text-align: center;
         }
     }
-    footer{
-        .footerContent{
-            form{
+
+    footer {
+        .footerContent {
+            form {
                 min-width: 290px;
                 width: 100%;
             }

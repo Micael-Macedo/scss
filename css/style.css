@@ -63,10 +63,12 @@ header {
   width: 100%;
 }
 header nav {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
   padding: 18px 120px;
+}
+@media screen and (max-width: 1024px) {
+  header nav {
+    padding: 18px 60px;
+  }
 }
 header nav ul {
   display: flex;
@@ -77,16 +79,26 @@ header nav ul {
 }
 header nav ul li {
   cursor: pointer;
+  transition: 0.5s;
 }
-header nav div {
+header nav ul li:hover {
+  color: #F57148;
+}
+header nav .desktop {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+header nav .desktop div {
   display: flex;
   align-items: center;
   gap: 40px;
 }
-@media screen and (max-width: 1024px) {
-  header nav {
-    padding: 18px 60px;
-  }
+header nav .mobile {
+  display: none;
+}
+header nav .mobile .mobileMenu {
+  display: none;
 }
 
 main {
@@ -344,6 +356,29 @@ footer .footerContent form .btnSubmit {
 }
 
 @media screen and (max-width: 768px) {
+  header nav {
+    padding: 18px 20px;
+  }
+  header nav .desktop {
+    display: none;
+  }
+  header nav .mobile {
+    display: flex;
+    display: flex;
+    align-items: unset;
+    flex-direction: column;
+  }
+  header nav .mobile .mobileOptions {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  header nav .mobile .mobileOptions .hamburguer {
+    width: 50px;
+  }
+  header nav .mobile .mobileOptions .hamburguer img {
+    width: 100%;
+  }
   .sectionContent {
     gap: 20px;
   }
@@ -388,7 +423,6 @@ footer .footerContent form .btnSubmit {
   }
   .mainContent div.mainImage {
     display: none;
-    visibility: hidden;
   }
   .titleContent {
     margin-bottom: 30px;
