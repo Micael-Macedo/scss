@@ -32,6 +32,7 @@
   font-weight: 600;
 }
 .sectionContent .contentDescription span {
+  width: 100%;
   font-weight: 400;
   font-size: 30px;
 }
@@ -51,30 +52,41 @@
 .sectionContent .contentDescription ul li {
   margin-left: 20px;
 }
-.sectionContent div img {
-  height: 650px;
+.sectionContent .sectionImg {
+  width: 50%;
+}
+.sectionContent .sectionImg img {
+  width: 100%;
 }
 
-nav {
+header {
+  width: 100%;
+}
+header nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 18px 120px;
 }
-nav ul {
+header nav ul {
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 30px;
   list-style: none;
 }
-nav ul li {
+header nav ul li {
   cursor: pointer;
 }
-nav div {
+header nav div {
   display: flex;
   align-items: center;
   gap: 40px;
+}
+@media screen and (max-width: 1024px) {
+  header nav {
+    padding: 18px 60px;
+  }
 }
 
 main {
@@ -89,44 +101,48 @@ main .mainContent {
   justify-content: center;
 }
 main .mainContent div {
-  width: 636px;
+  width: 50%;
 }
-main .mainContent div h1 {
+main .mainContent .mainText h1 {
   width: 456px;
   font-size: 80px;
   color: #F57148;
 }
-main .mainContent div span {
+main .mainContent .mainText span {
   color: #F57148;
   font-weight: 300;
   font-size: 65px;
 }
-main .mainContent div p {
+main .mainContent .mainText p {
   margin-top: 50px;
   margin-bottom: 60px;
 }
-main .mainContent div .email {
+main .mainContent .mainText .email {
   margin-bottom: 20px;
   font-weight: 500;
   font-size: 16px;
 }
-main .mainContent div div {
+main .mainContent .mainText div {
   display: flex;
   align-items: center;
   gap: 20px;
+  width: 100%;
 }
-main .mainContent div div p {
+main .mainContent .mainText div .PrimaryButton {
+  min-width: 160px;
+}
+main .mainContent .mainText div p {
   font-size: 42px;
   font-weight: 300;
   margin: 0%;
 }
-main .mainContent .mainImage {
+main .mainImage {
   display: flex;
   align-items: center;
   justify-content: center;
 }
-main .mainContent .mainImage img {
-  width: 657px;
+main .mainImage img {
+  width: 100%;
 }
 
 .PrimaryButton {
@@ -165,7 +181,9 @@ main .mainContent .mainImage img {
   display: flex;
   align-items: center;
   justify-content: center;
+  width: 100%;
   gap: 60px;
+  flex-wrap: wrap;
 }
 .products div {
   width: 250px;
@@ -190,12 +208,14 @@ main .mainContent .mainImage img {
   flex-direction: column;
   gap: 30px;
   margin-bottom: 107px;
+  max-width: 100%;
 }
 .titleContent .title1 {
-  margin: auto;
   width: 673px;
+  margin: auto;
   font-size: 40px;
   font-weight: 500;
+  max-width: 100%;
 }
 
 .subtitle1 {
@@ -299,11 +319,13 @@ footer .footerContent form {
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  min-width: 400px;
   width: 467px;
   gap: 18px;
   margin-top: 31px;
 }
-footer .footerContent form input, footer .footerContent form textarea {
+footer .footerContent form input,
+footer .footerContent form textarea {
   width: 100%;
   border: none;
   padding-left: 16px;
@@ -319,4 +341,115 @@ footer .footerContent form .btnSubmit {
   display: flex;
   align-items: end;
   justify-content: right;
+}
+
+@media screen and (max-width: 768px) {
+  .sectionContent {
+    gap: 20px;
+  }
+  .sectionContent .contentDescription {
+    width: 60%;
+  }
+  footer .footerContent {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+  footer .footerContent form {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 450px) {
+  .mainContent {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .mainContent div.mainText {
+    width: 100%;
+  }
+  .mainContent div.mainText h1 {
+    width: 100%;
+    font-size: 70px;
+  }
+  .mainContent div.mainText span {
+    text-align: center;
+    font-size: 50px;
+  }
+  .mainContent div.mainText div {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+  .mainContent div.mainImage {
+    display: none;
+    visibility: hidden;
+  }
+  .titleContent {
+    margin-bottom: 30px;
+  }
+  .titleContent .title1 {
+    width: 100%;
+  }
+  .products {
+    gap: 20px;
+  }
+  .products p {
+    text-align: center;
+  }
+  .sectionContent {
+    padding: 2%;
+    flex-wrap: wrap;
+    gap: 5px;
+  }
+  .sectionContent .sectionImg {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .sectionContent .sectionImg img {
+    width: 280px;
+    height: 300px;
+  }
+  .sectionContent .contentDescription {
+    text-align: center;
+  }
+  .sectionContent .contentDescription .text {
+    margin-bottom: 20px;
+    text-align: justify;
+  }
+  .sectionContent .contentDescription ul {
+    margin-bottom: 20px;
+  }
+  .testimonials {
+    margin-top: 40px;
+    flex-wrap: wrap;
+    gap: 120px;
+  }
+  .testimonials .testimonial2 {
+    bottom: 0px;
+  }
+  .happyHour h2 {
+    width: 100%;
+  }
+  .happyHour p {
+    text-align: center;
+  }
+  footer .footerContent form {
+    min-width: 290px;
+    width: 100%;
+  }
+}
+@media screen and (max-width: 375px) {
+  .mainContent .mainText h1 {
+    font-size: 50px;
+  }
+  .mainContent .mainText span {
+    font-size: 40px;
+  }
 }/*# sourceMappingURL=style.css.map */
