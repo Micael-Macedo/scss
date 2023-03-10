@@ -97,8 +97,14 @@ header nav .desktop div {
 header nav .mobile {
   display: none;
 }
-header nav .mobile .mobileMenu {
+header nav .mobile div.mobileMenu {
   display: none;
+}
+header nav .mobile div.mobileMenu ul {
+  text-align: right;
+}
+header nav .mobile div.mobileMenu ul li {
+  text-align: right;
 }
 
 main {
@@ -373,6 +379,12 @@ footer .footerContent form .btnSubmit {
     align-items: center;
     justify-content: space-between;
   }
+  header nav .mobile .mobileOptions i {
+    width: 50px;
+  }
+  header nav .mobile .mobileOptions i img {
+    width: 30px;
+  }
   header nav .mobile .mobileOptions .hamburguer {
     width: 50px;
   }
@@ -480,10 +492,10 @@ footer .footerContent form .btnSubmit {
   }
 }
 @media screen and (max-width: 375px) {
-  .mainContent .mainText h1 {
+  .mainContent div.mainText h1 {
     font-size: 50px;
   }
-  .mainContent .mainText span {
+  .mainContent div.mainText span {
     font-size: 40px;
   }
 }/*# sourceMappingURL=style.css.map */

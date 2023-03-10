@@ -126,7 +126,8 @@ header {
             li {
                 cursor: pointer;
                 transition: 0.5s;
-                &:hover{
+
+                &:hover {
                     color: $PrimaryColor;
                 }
             }
@@ -141,10 +142,20 @@ header {
             }
 
         }
+
         .mobile {
             display: none;
-            .mobileMenu {
+
+            div.mobileMenu {
                 display: none;
+
+                ul {
+                    text-align: right;
+
+                    li {
+                        text-align: right;
+                    }
+                }
             }
         }
     }
@@ -415,10 +426,12 @@ footer {
 
     }
 }
+
 @media screen and (max-width: 768px) {
     header {
         nav {
             padding: 18px 20px;
+
             .desktop {
                 display: none;
             }
@@ -430,6 +443,13 @@ footer {
 
                 .mobileOptions {
                     @include flexBetween(center);
+
+                    i {
+                        width: 50px;
+                        img {
+                            width: 30px;
+                        }
+                    }
 
                     .hamburguer {
                         width: 50px;
@@ -570,7 +590,7 @@ footer {
 
 @media screen and (max-width: 375px) {
     .mainContent {
-        .mainText {
+        div.mainText {
             h1 {
                 font-size: 50px;
             }
